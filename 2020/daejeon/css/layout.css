@@ -2151,7 +2151,7 @@ header .login-area a .iconify {
 
 @media (max-width: 640px) {
   .m3-area h2::before {
-    background-size: 80%;
+    background-size: 70%;
   }
 }
 
@@ -2264,7 +2264,7 @@ header .login-area a .iconify {
 
 @media screen and (max-width: 760px) {
   .m3-1 .m-minwon li {
-    width: calc(100% / 2.1);
+    width: 45%;
   }
 }
 
@@ -2696,6 +2696,13 @@ header .login-area a .iconify {
   }
 }
 
+@media (max-width: 500px) {
+  .m4-1 .m-title div,
+  .m4-1 .m-title ul {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .m4-1 .m-title div {
     -webkit-box-ordinal-group: 2;
@@ -2708,6 +2715,12 @@ header .login-area a .iconify {
   position: relative;
   display: block;
   text-indent: -99999px;
+}
+
+@media (max-width: 500px) {
+  .m4-1 .m-title div a {
+    display: none;
+  }
 }
 
 .m4-1 .m-title div a::before {
@@ -2729,6 +2742,7 @@ header .login-area a .iconify {
 @media screen and (max-width: 740px) {
   .m4-1 .m-title div a::before {
     background-position-x: right;
+    background-size: 80%;
   }
 }
 
@@ -2800,6 +2814,13 @@ header .login-area a .iconify {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .m4-1 .m-title ul {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
   }
 }
 
@@ -2902,7 +2923,7 @@ header .login-area a .iconify {
 
 @media (max-width: 500px) {
   .m4-2 .m-festival {
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
   }
 }
 

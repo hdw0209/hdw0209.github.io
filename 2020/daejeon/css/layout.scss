@@ -1408,7 +1408,7 @@ header {
                 transform: translate(0, -50%);
             }
             @include mq(mobile_L) {
-                background-size: 80%;
+                background-size: 70%;
             }
         }
         &::after {
@@ -1480,7 +1480,7 @@ header {
                 width: calc(100% / 3.2);
             }
             @media screen and (max-width: 760px) {
-                width: calc(100% / 2.1);
+                width: 45%;
             }
 
             &:hover {
@@ -1786,6 +1786,9 @@ header {
             @media screen and (max-width: 740px) {
                 flex: 0 0 48%;
             }
+            @include mq(mobile_S) {
+                display: none;
+            }
         }
         div {
             @include mq(tablet) {
@@ -1796,6 +1799,10 @@ header {
             position: relative;
             display: block;
             text-indent: -99999px;
+            @include mq(mobile_S) {
+                display: none;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -1809,6 +1816,7 @@ header {
                 }
                 @media screen and (max-width: 740px) {
                     background-position-x: right;
+                    background-size: 80%;
                 }
             }
         }
@@ -1849,6 +1857,9 @@ header {
             }
             @media screen and (max-width: 740px) {
                 justify-content: flex-start;
+            }
+            @include mq(mobile_S) {
+                transform: translateX(25%);
             }
             li {
                 margin-left: 0.3rem;
@@ -1913,7 +1924,7 @@ header {
             flex: 0 0 100%;
         }
         @include mq(mobile_S) {
-            padding-bottom: 1.5rem;
+            padding-bottom: 0;
         }
         &::before {
             content: '';

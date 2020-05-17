@@ -182,7 +182,6 @@ nav {
         }
         h1 {
             font-size: 2.5rem;
-            //letter-spacing: 0.3rem;
             margin: 1.5rem;
         }
         li {
@@ -199,6 +198,9 @@ nav {
             box-shadow: 0 0 rgba(#000, 0);
             padding: 0.5em 1em;
             transition: all 0.2s;
+            @include mq(mobile) {
+                margin-bottom: 0.5rem;
+            }
             &:hover {
                 box-shadow: 8px 8px rgba(#000, 0.3);
             }
@@ -246,6 +248,7 @@ nav {
         }
         h2 {
             box-sizing: border-box;
+            font-size: 1.2rem;
             margin-top: 0.5rem;
             span {
                 font-weight: 300;
@@ -292,6 +295,7 @@ nav {
             }
             @include mq(mobile) {
                 position: absolute;
+                font-size: 0.75rem;
                 right: 1rem;
                 bottom: 0;
             }
@@ -308,12 +312,18 @@ nav {
             margin-top: 1.5rem;
             width: 100%;
         }
+        @include mq(mobile) {
+            margin-top: 1.2rem;
+            width: 100%;
+        }
     }
     .web-slick {
         display: flex;
         justify-content: space-between;
         height: 530px;
-
+        @include mq(mobile) {
+            height: 480px;
+        }
         .img-area {
             height: 400px;
             overflow: hidden;
@@ -322,6 +332,7 @@ nav {
             border-radius: 20px;
             background: #fff;
             @include mq(mobile) {
+                height: 350px;
                 border-radius: 0;
             }
         }
@@ -396,7 +407,7 @@ nav {
             box-sizing: border-box;
             width: 33.3%;
             @include mq(mobile) {
-                width: 50%;
+                width: 100%;
             }
         }
         .img-area {
