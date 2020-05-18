@@ -964,6 +964,14 @@ header .login-area a .iconify {
   }
 }
 
+@media (max-width: 500px) {
+  .sch-area .sch-list fieldset select,
+  .sch-area .sch-list fieldset input,
+  .sch-area .sch-list fieldset button {
+    width: 60%;
+  }
+}
+
 @media (max-width: 1000px) {
   .sch-area .sch-list fieldset select {
     display: none;
@@ -1012,6 +1020,12 @@ header .login-area a .iconify {
     width: 5rem;
     min-width: 5rem;
     margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sch-area .sch-list fieldset button {
+    margin-left: 0.2rem;
   }
 }
 
