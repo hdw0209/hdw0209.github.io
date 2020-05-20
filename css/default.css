@@ -463,6 +463,19 @@ nav ul a.on::after, nav ul a:hover::after {
   }
 }
 
+.s1-area .web-slick .img-area.img-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .s1-area .web-slick img {
   width: 100%;
 }

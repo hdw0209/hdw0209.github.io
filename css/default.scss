@@ -335,6 +335,11 @@ nav {
                 height: 350px;
                 border-radius: 0;
             }
+            &.img-center {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+            }
         }
         img {
             width: 100%;
