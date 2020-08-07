@@ -183,6 +183,14 @@ nav {
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
+        img,
+        h1,
+        li {
+            transform: translateY(40px) scaleY(1.4);
+            transform-origin: top;
+            opacity: 0;
+            animation: intro 0.8s forwards;
+        }
         img {
             width: 500px;
             @include mq(mobile) {
@@ -190,10 +198,12 @@ nav {
             }
         }
         h1 {
+            animation-delay: 0.3s;
             font-size: 2.5rem;
             margin: 1.5rem;
         }
         li {
+            animation-delay: 0.6s;
             display: inline-block;
         }
         button {
@@ -217,13 +227,25 @@ nav {
         p {
             font-size: 0.7rem;
         }
+
+        @keyframes intro {
+            to {
+                transform: translateY(0) scaleY(1);
+                opacity: 1;
+            }
+        }
+
+        [data-aos='animation-scale-y'].aos-animate {
+            transform: translateY(0) scaleY(1);
+            opacity: 1;
+        }
     }
 
     .animate {
         position: absolute;
         bottom: 50px;
-        animation: animate 0.5s ease-in-out infinite;
-        @keyframes animate {
+        animation: mouse 0.5s ease-in-out infinite;
+        @keyframes mouse {
             0%,
             100% {
                 bottom: 50px;
