@@ -115,7 +115,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: right 0.3s;
+            transition: right 0.3s ease-in-out;
         }
         &.on {
             @include mq(mobile) {
