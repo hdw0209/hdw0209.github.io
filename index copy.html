@@ -4,9 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>PORTFOLIO</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/scrolloverflow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
+        <script src="/js/sal.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
+        <link rel="stylesheet" href="/css/slick.css" />
+        <link rel="stylesheet" href="/css/sal.css" />
         <link rel="stylesheet" href="/css/default.css" />
     </head>
     <body>
@@ -26,27 +35,27 @@
         <div id="fullpage">
             <div class="intro-area section" id="intro">
                 <div class="content">
-                    <img src="/images/hello.svg" alt="hello" />
-                    <h1>
+                    <img src="/images/hello.svg" alt="hello" data-sal="slide-up" />
+                    <h1 data-sal="slide-up" data-sal-delay="400">
                         PORTFOLIO
                     </h1>
-                    <ul>
+                    <ul data-sal="slide-up" data-sal-delay="800">
                         <li><button type="submit" onclick="javascript:$.fn.fullpage.moveTo(2);">WEB DESIGN / PUBLISING</button></li>
                         <li><button type="submit" onclick="javascript:$.fn.fullpage.moveTo(3);">PREVIOUS WORKS</button></li>
                     </ul>
                 </div>
-                <span class="iconify animate" data-icon="simple-line-icons:mouse" data-inline="false" width="20"></span>
+                <span class="iconify animate__animated animate__shakeY animate__slower" data-icon="simple-line-icons:mouse" data-inline="false" width="20"></span>
             </div>
             <div class="s1-area section">
                 <div class="content">
-                    <div class="title">
+                    <div class="title" data-sal="slide-up">
                         <h1>PORTFOLIO</h1>
                         <h2>WEB DESIGN <span>/</span> PUBLISING</h2>
                         <p>2019 ~ 2020</p>
                     </div>
-                    <div class="slick-area swiper-container">
-                        <ul class="web-area swiper-wrapper">
-                            <li class="swiper-slide">
+                    <div class="slick-area" data-sal="slide-up" data-sal-delay="300">
+                        <ul class="web-slick">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_07.png" alt="강진군도서관" />
                                 </div>
@@ -60,7 +69,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area img-center" style="background: #b0b0b0;">
                                     <img src="/images/design_2020_06.png" alt="내 주변 마스크" />
                                 </div>
@@ -74,7 +83,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_05.png" alt="지출 기록장" />
                                 </div>
@@ -88,7 +97,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_04.png" alt="하루 기록장" />
                                 </div>
@@ -102,7 +111,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_02.png" alt="대전시청" />
                                 </div>
@@ -116,7 +125,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_03.png" alt="국가슈퍼컴퓨팅센터" />
                                 </div>
@@ -130,7 +139,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2020_01.jpg" alt="국가슈퍼컴퓨팅센터" />
                                 </div>
@@ -144,7 +153,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li>
                                 <div class="img-area">
                                     <img src="/images/design_2019_01.jpg" alt="특허청 메인" />
                                 </div>
@@ -159,7 +168,6 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -170,142 +178,142 @@
                         <h2>PREVIOUS WORKS</h2>
                         <p>2004 ~ 2018</p>
                     </div>
-                    <div class="previous-area swiper-container">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
+                    <div class="previous-area">
+                        <ul>
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_01.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 생활체육공원</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_02.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 건설사업소</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_03.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 서울사무소</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_04.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 농업기술센터</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_05.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>열린시장실</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_06.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>석오이동녕기념관</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_07.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안박물관</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_08.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 문화공연</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_09.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 하늘그린</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_10.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 도서관</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_11.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 동남구보건소</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_12.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 자치법규</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_13.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 시민문화여성회관</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_14.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 일자리종합지원센터</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_15.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시청 외국어</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_16.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>천안시 문화관광</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_18.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>중소기업청</h3>
                                     <p>WEB DESIGN / PUBLISING</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_19.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>제품 패키지</h3>
                                     <p>Package</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_20.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>홍보용 카달로그</h3>
                                     <p>Catalog & Manual</p>
                                 </div>
                             </li>
-                            <li class="swiper-slide">
+                            <li data-sal="slide-up">
                                 <div class="img-area"><img src="/images/design_2012_21.jpg" alt="디자인" /></div>
                                 <div class="title-area">
                                     <h3>국토 EXPO 홍보자료용 리플렛</h3>
@@ -313,29 +321,47 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
             <div class="s3-area section">
                 <ul>
-                    <li>
+                    <li data-sal="slide-up">
                         <a href="https://github.com/hdw0209" target="_blank"
                             ><strong>GITHUB <span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span></strong> : https://github.com/hdw0209 <span class="iconify" data-icon="heroicons:md-external-link" data-inline="false"></span
                         ></a>
                     </li>
-                    <li>
+                    <li data-sal="slide-up" data-sal-delay="300">
                         <a href="https://swai-p.tistory.com/" target="_blank"><strong>TISTORY</strong> : https://swai-p.tistory.com <span class="iconify" data-icon="heroicons:md-external-link" data-inline="false"></span></a>
                     </li>
                 </ul>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+
         <script>
+            $('.web-slick').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                adaptiveHeight: true,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 940,
+                        settings: {
+                            slidesToShow: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        },
+                    },
+                ],
+            });
+
             var nav = $('nav');
             var nav_btn = nav.find('a');
 
@@ -374,45 +400,7 @@
                     });
             });
 
-            var swiperWeb = new Swiper('.slick-area', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                },
-            });
-
-            var swiperPrevious = new Swiper('.previous-area', {
-                slidesPerView: 1,
-                slidesPerColumn: 2,
-                spaceBetween: 20,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
-                        slidesPerColumn: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        slidesPerColumn: 2,
-                    },
-                },
-            });
-
-            // button ripple
+            // 버튼 ripple
             var buttons = document.getElementsByTagName('button');
 
             Array.prototype.forEach.call(buttons, function (b) {
@@ -436,12 +424,16 @@
                 circle.classList.add('ripple');
             }
 
-            // sidemenu
+            // 사이드 메뉴 열기/닫기
             $('.nav-open').on('click', function () {
                 $('.side-nav').addClass('on');
             });
             $('.side-close,.side-nav a').on('click', function () {
                 $('.side-nav').removeClass('on');
+            });
+
+            sal({
+                once: false,
             });
         </script>
     </body>

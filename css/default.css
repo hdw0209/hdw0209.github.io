@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+* {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  --swiper-theme-color: #fff;
+}
+
 html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -67,10 +79,6 @@ button .ripple {
 a {
   color: #fff;
   text-decoration: none;
-}
-
-[data-sal] {
-  --sal-duration: 0.7s;
 }
 
 nav {
@@ -264,9 +272,31 @@ nav ul a.on::after, nav ul a:hover::after {
   font-size: 0.7rem;
 }
 
-.intro-area svg {
+.intro-area .animate {
   position: absolute;
   bottom: 50px;
+  -webkit-animation: animate 0.5s ease-in-out infinite;
+          animation: animate 0.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  100% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 60px;
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 60px;
+  }
 }
 
 .s1-area {
@@ -292,6 +322,9 @@ nav ul a.on::after, nav ul a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding: 3rem 0;
@@ -430,40 +463,38 @@ nav ul a.on::after, nav ul a:hover::after {
   }
 }
 
-.s1-area .web-slick {
+.s1-area .web-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 530px;
+  height: 600px;
 }
 
 @media (max-width: 768px) {
-  .s1-area .web-slick {
-    height: 480px;
+  .s1-area .web-area {
+    height: 530px;
   }
 }
 
-.s1-area .web-slick .img-area {
+.s1-area .web-area .img-area {
   height: 400px;
   overflow: hidden;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  background: #fff;
+  background: #ac9797;
 }
 
 @media (max-width: 768px) {
-  .s1-area .web-slick .img-area {
+  .s1-area .web-area .img-area {
     height: 350px;
     border-radius: 0;
   }
 }
 
-.s1-area .web-slick .img-area.img-center {
+.s1-area .web-area .img-area.img-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,25 +507,25 @@ nav ul a.on::after, nav ul a:hover::after {
           justify-content: center;
 }
 
-.s1-area .web-slick img {
+.s1-area .web-area img {
   width: 100%;
 }
 
-.s1-area .web-slick .slick-list li {
+.s1-area .web-area .slick-list li {
   margin: 0 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
-  .s1-area .web-slick .slick-list li {
+  .s1-area .web-area .slick-list li {
     margin: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
-.s1-area .web-slick .slick-title {
+.s1-area .web-area .slick-title {
   text-align: center;
   font-size: 0.9rem;
   width: 100%;
@@ -502,21 +533,21 @@ nav ul a.on::after, nav ul a:hover::after {
           box-sizing: border-box;
 }
 
-.s1-area .web-slick .slick-title h3 {
+.s1-area .web-area .slick-title h3 {
   font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -1px;
   font-size: 0.9rem;
   font-weight: 400;
 }
 
-.s1-area .web-slick .slick-title p {
+.s1-area .web-area .slick-title p {
   text-transform: uppercase;
   font-size: 0.6rem;
   color: rgba(255, 255, 255, 0.5);
   margin-top: 0.4em;
 }
 
-.s1-area .web-slick .slick-title button {
+.s1-area .web-area .slick-title button {
   margin: 1rem 0;
   font-size: 0.6rem;
   border: none;
@@ -532,23 +563,22 @@ nav ul a.on::after, nav ul a:hover::after {
   line-height: 100%;
 }
 
-.s1-area .web-slick .slick-title button:hover {
+.s1-area .web-area .slick-title button:hover {
   border-color: #fff;
   -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-  .s1-area .web-slick .slick-title button {
+  .s1-area .web-area .slick-title button {
     width: 90%;
     font-weight: 700;
   }
 }
 
 .s2-area {
-  -webkit-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
+  width: 100%;
+  height: 100vh;
   background: #4660b7;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -569,6 +599,9 @@ nav ul a.on::after, nav ul a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding: 3rem 0;
@@ -690,7 +723,9 @@ nav ul a.on::after, nav ul a:hover::after {
 }
 
 .s2-area .previous-area {
-  width: calc(100% - 200px);
+  width: calc(100% - 260px);
+  height: 600px;
+  margin: 0;
 }
 
 @media (max-width: 1200px) {
@@ -700,37 +735,30 @@ nav ul a.on::after, nav ul a:hover::after {
   }
 }
 
-.s2-area .previous-area ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.s2-area .previous-area li {
-  position: relative;
-  padding: 0 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 33.3%;
-}
-
 @media (max-width: 768px) {
-  .s2-area .previous-area li {
-    width: 100%;
+  .s2-area .previous-area {
+    height: 530px;
   }
 }
 
+.s2-area .previous-area li {
+  height: calc((100% - 70px) / 2);
+}
+
 .s2-area .previous-area .img-area {
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   height: 200px;
   overflow: hidden;
   border-radius: 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  .s2-area .previous-area .img-area {
+    margin: 0 1rem;
+    height: 180px;
+  }
 }
 
 .s2-area .previous-area .img-area img {
@@ -744,8 +772,13 @@ nav ul a.on::after, nav ul a:hover::after {
 
 .s2-area .previous-area .title-area {
   margin-top: 1rem;
-  margin-bottom: 2rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .s2-area .previous-area .title-area {
+    margin-top: 0.5rem;
+  }
 }
 
 .s2-area .previous-area .title-area h3 {
